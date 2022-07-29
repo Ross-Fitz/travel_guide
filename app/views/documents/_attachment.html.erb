@@ -1,0 +1,3 @@
+<% if @document.file.attached? %>
+    <%= link_to document.file.filename, url_for(document.file) %>
+<% end %>
