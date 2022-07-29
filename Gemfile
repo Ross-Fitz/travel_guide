@@ -73,3 +73,4 @@ end
 
 gem 'bootstrap', '~> 5.1', '>= 5.1.3'
 gem 'devise', '~> 4.8', '>= 4.8.1'
+gem 'carrierwave', '~> 2.2', '>= 2.2.2'
