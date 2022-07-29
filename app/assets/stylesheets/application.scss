@@ -1,0 +1,25 @@
+@import "bootstrap";
+
+nav{
+    img{
+        max-width: 110px;
+        max-height: 110px;
+    }
+}
+
+body{
+    h1 {
+        font-size: 30px;
+    }
+    h2{
+        font-size: 20px;
+    }
+    p{
+        font-size: 14px;
+    }
+    text-align: center;
+    .links{
+        text-decoration: underline;
+        font-style:italic;
+    }
+}
