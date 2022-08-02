@@ -73,4 +73,7 @@ end
 
 gem 'bootstrap', '~> 5.1', '>= 5.1.3'
 gem 'devise', '~> 4.8', '>= 4.8.1'
-gem 'carrierwave', '~> 2.2', '>= 2.2.2'
+gem 'json', '~> 2.6', '>= 2.6.2'
+gem 'active_model_serializers', '~> 0.10.2'
+gem 'jsonapi-resources', '~> 0.10.7'
+
