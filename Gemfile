@@ -76,4 +76,3 @@ gem 'devise', '~> 4.8', '>= 4.8.1'
 gem 'json', '~> 2.6', '>= 2.6.2'
 gem 'active_model_serializers', '~> 0.10.2'
 gem 'jsonapi-resources', '~> 0.10.7'
-

@@ -1,5 +1,5 @@
 class CountryResource < JSONAPI::Resource
-    attributes :name, :information
+    attributes :name
 
-    has_one :country
+    has_many :visas
 end

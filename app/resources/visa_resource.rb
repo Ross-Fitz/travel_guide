@@ -1,5 +1,5 @@
 class VisaResource < JSONAPI::Resource
-    attributes :name
+    attributes :name, :information
 
-    has_many :visas
+    has_one :country
 end
