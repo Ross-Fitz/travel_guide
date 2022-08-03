@@ -1,0 +1,15 @@
+<% if user_signed_in? %>
+<% if current_user %>
+
+<h1>New Forum Post</h1>
+
+<%= render "form", post: @post %>
+
+<br>
+
+<div>
+  <%= link_to "Back to posts", posts_path %>
+</div>
+
+<% end %>
+<% end %>

@@ -1,0 +1,18 @@
+<% if user_signed_in?%>
+<form action="<%= post_comments_path(@post) %>" method="post">
+    <input type="hidden" name="authenticity_token"></>
+    
+    <textarea name="comment[conent]" rows="6" cols="20" placeholder="Add your comment here."></textarea>
+
+    <input type="submit" value="Submit"></>
+</form>
+
+<% else %>
+<form action="<%= post_comments_path(@post) %>" method="post">
+    <input type="hidden" name="authenticity_token"></>
+    
+    <textarea name="comment[conent]" rows="6" cols="20" placeholder="You must be logged in to add a comment."></textarea>
+
+</form>
+
+<% end %>
