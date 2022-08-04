@@ -1,4 +1,5 @@
 class CommentsController < ApplicationController
+    skip_before_action :verify_authenticity_token
     def create
         # Create a new comment
         # for the post from the current user

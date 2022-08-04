@@ -1,25 +1,89 @@
+/* Styling throughout the web application */
+
 @import "bootstrap";
 
-nav{
-    img{
-        max-width: 110px;
-        max-height: 110px;
-    }
+nav img {
+    max-height: 110px;
+    max-width: 110px;
 }
 
-body{
+body {
+    background-image: linear-gradient(red, white, black);
+    text-align: center;
+    color: #000000;
+    background-position: bottom-center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+
     h1 {
         font-size: 30px;
     }
     h2{
+        font-size: 25px;
+    }
+    h3 {
         font-size: 20px;
+        }
+    p {
+        font-size: 16px;
     }
-    p{
-        font-size: 14px;
+
+
+}
+
+.home-container {
+    background-color: #00000095;
+    margin: 6% 50% 6% 2%;
+    padding: 5%;
+    font-size: 20px;
+    color: #ffffff;
+}
+
+.intro {
+    font-size: 25px;
+}
+
+.account-edit{
+    background-color: #00000095;
+    margin: 6% 50% 6% 2%;
+    padding: 5%;
+    font-size: 20px;
+}
+
+@media screen and (max-width: 1400px) {
+    .form-box{
+        margin: 0% 20%;
     }
-    text-align: center;
-    .links{
-        text-decoration: underline;
-        font-style:italic;
+    body{
+        background-image: linear-gradient(red, white, black);
+        background-position: center;
+        background-size: cover;
+    }
+}
+
+@media screen and (max-width: 786px) {
+    .form-box{
+        margin: 0% 10%;
+    }
+    
+}
+@media screen and (max-width: 500px) {
+    body{
+        background-image: linear-gradient(red, white, black);
+        background-position: bottom-center;
+        background-size: cover;
+    }
+}
+
+
+
+@media screen and (max-width: 380px) {
+    .form-box{
+        margin: 0% 5%;
+    }
+
+    .heading-account h1{
+        font-size: 15px;
     }
 }
