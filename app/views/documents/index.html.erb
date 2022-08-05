@@ -1,14 +1,17 @@
-<p style="color: green"><%= notice %></p>
+<p style="#ffffff;"><%= notice %></p>
 
 <h1>Your Documents</h1>
 
 <div id="documents">
   <% @documents.each do |document| %>
     <%= render document %>
+    <br>
     <p>
       <%= link_to "Show this document", document %>
     </p>
+    <hr>
   <% end %>
 </div>
+
 
 <%= link_to "New document", new_document_path %>

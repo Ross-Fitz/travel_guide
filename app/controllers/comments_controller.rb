@@ -1,11 +1,11 @@
 class CommentsController < ApplicationController
     skip_before_action :verify_authenticity_token
+
     def create
-        # Create a new comment
-        # for the post from the current user
+        # Create a new comment for the post from the current user
         @comment = current_user.comments.new(comment_params)
-        #if !@comment.save
-         #   flash[:notice] = @comment.errors.full_messages_to_sentence
+        if @comment.save
+            flash[:notice] = @comment.errors.full_messages_to_sentence
 
     redirect_to post_path(params[:post_id])
     

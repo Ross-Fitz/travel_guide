@@ -29,7 +29,6 @@ body {
         font-size: 16px;
     }
 
-
 }
 
 .home-container {
@@ -44,7 +43,7 @@ body {
     font-size: 25px;
 }
 
-.account-edit{
+.forms{
     background-color: #00000095;
     margin: 6% 50% 6% 2%;
     padding: 5%;
@@ -75,9 +74,6 @@ body {
         background-size: cover;
     }
 }
-
-
-
 @media screen and (max-width: 380px) {
     .form-box{
         margin: 0% 5%;
@@ -86,4 +82,4 @@ body {
     .heading-account h1{
         font-size: 15px;
     }
-}
+} 
