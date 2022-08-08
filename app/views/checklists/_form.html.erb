@@ -1,0 +1,32 @@
+
+<%= simple_form_for(@checklist) do |f| %>
+  <%= f.error_notification %>
+  <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+
+  <div class="form-labels">
+    <%= f.label :apply_invite %>
+    <%= f.check_box :apply_invite, class:"checklist" %><br>
+    <%= f.label :accept_invite %>
+    <%= f.check_box :accept_invite, class:"checklist" %><br>
+    <%= f.label :passport %>
+    <%= f.check_box :passport, class:"checklist" %><br>
+    <%= f.label :id_document %>
+    <%= f.check_box :id_document, class:"checklist" %><br>
+    <%= f.label :police_cert %>
+    <%= f.check_box :police_cert, class:"checklist" %><br>
+    <%= f.label :cv %>
+    <%= f.check_box :cv, class:"checklist" %><br>
+    <%= f.label :family_information %>
+    <%= f.check_box :family_information, class:"checklist" %><br>
+    <%= f.label :biometrics %>
+    <%= f.check_box :biometrics, class:"checklist" %><br>
+    <%= f.label :acceptance_letter %>
+    <%= f.check_box :acceptance_letter, class:"checklist" %><br>
+    <%= f.label :funds %>
+    <%= f.check_box :funds, class:"checklist" %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit, class:"btn btn-light" %>
+  </div>
+<% end %>

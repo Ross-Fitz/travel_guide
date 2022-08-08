@@ -1,10 +1,7 @@
 #These are the routes to access the pages, e.g., posts, documents and checklists.
 
 Rails.application.routes.draw do
-  resources :items
-  jsonapi_resources :countries
-  jsonapi_resources :visas
-  resources :countries
+  resources :checklists
   resources :documents
   devise_for :users, controllers: { sessions: 'users/sessions' }
   resources :posts do

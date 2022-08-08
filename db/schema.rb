@@ -10,12 +10,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_08_04_190923) do
+ActiveRecord::Schema[7.0].define(version: 2022_08_08_000551) do
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
     t.string "record_type", null: false
-    t.integer "record_id", null: false
-    t.integer "blob_id", null: false
+    t.bigint "record_id", null: false
+    t.bigint "blob_id", null: false
     t.datetime "created_at", null: false
     t.index ["blob_id"], name: "index_active_storage_attachments_on_blob_id"
     t.index ["record_type", "record_id", "name", "blob_id"], name: "index_active_storage_attachments_uniqueness", unique: true
@@ -34,23 +34,40 @@ ActiveRecord::Schema[7.0].define(version: 2022_08_04_190923) do
   end
 
   create_table "active_storage_variant_records", force: :cascade do |t|
-    t.integer "blob_id", null: false
+    t.bigint "blob_id", null: false
     t.string "variation_digest", null: false
     t.index ["blob_id", "variation_digest"], name: "index_active_storage_variant_records_uniqueness", unique: true
   end
 
-  create_table "comments", force: :cascade do |t|
-    t.text "content", null: false
-    t.integer "post_id", null: false
-    t.integer "user_id", null: false
+  create_table "checklists", force: :cascade do |t|
+    t.string "apply_invite"
+    t.string "accept_invite"
+    t.string "passport"
+    t.string "id_document"
+    t.string "police_cert"
+    t.string "cv"
+    t.string "family_information"
+    t.string "biometrics"
+    t.string "acceptance_letter"
+    t.string "funds"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "user_id", null: false
+    t.index ["user_id"], name: "index_checklists_on_user_id"
+  end
+
+  create_table "comments", force: :cascade do |t|
+    t.text "content"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "user_id", null: false
+    t.integer "post_id", null: false
     t.index ["post_id"], name: "index_comments_on_post_id"
     t.index ["user_id"], name: "index_comments_on_user_id"
   end
 
   create_table "countries", force: :cascade do |t|
-    t.string "name"
+    t.string "name", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -60,15 +77,8 @@ ActiveRecord::Schema[7.0].define(version: 2022_08_04_190923) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "attachment"
-  end
-
-  create_table "items", force: :cascade do |t|
-    t.string "title"
-    t.text "description"
     t.integer "user_id", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["user_id"], name: "index_items_on_user_id"
+    t.index ["user_id"], name: "index_documents_on_user_id"
   end
 
   create_table "posts", force: :cascade do |t|
@@ -76,7 +86,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_08_04_190923) do
     t.text "description", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "user_id"
+    t.integer "user_id", null: false
     t.index ["user_id"], name: "index_posts_on_user_id"
   end
 
@@ -93,8 +103,8 @@ ActiveRecord::Schema[7.0].define(version: 2022_08_04_190923) do
   end
 
   create_table "visas", force: :cascade do |t|
-    t.string "name"
-    t.text "information"
+    t.string "name", null: false
+    t.text "information", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "country_id"
@@ -102,9 +112,9 @@ ActiveRecord::Schema[7.0].define(version: 2022_08_04_190923) do
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
+  add_foreign_key "checklists", "users"
   add_foreign_key "comments", "posts"
   add_foreign_key "comments", "users"
-  add_foreign_key "items", "users"
-  add_foreign_key "posts", "users"
+  add_foreign_key "documents", "users"
   add_foreign_key "posts", "users"
 end

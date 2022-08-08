@@ -1,14 +1,11 @@
 <% if user_signed_in? %>
 
-<h1>New Forum Post</h1>
-<div class="forms">
-<%= render "form", post: @post %>
-<br>
-<div>
-  <%= link_to "Back to posts", posts_path %>
-</div>
-<% else %>
-  <p>You must be signed in to create a forum post.</p>
-  <a href="/posts">Return to posts</a>
+  <h1>New Forum Post</h1>
+    <div class="forms">
+      <%= render "form", post: @post %>
+      <br>
+      <div>
+        <%= link_to "Back to posts", post_path, class:"btn btn-light" %>
+      </div>
+    </div>
 <% end %>
-</div>

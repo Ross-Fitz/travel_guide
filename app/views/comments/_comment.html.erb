@@ -1,6 +1,10 @@
-<article>
-    <p><%= comment.content %></p>
+<div id="<%= dom_id comment %>">
+  <p>
+    <strong>Content:</strong>
+    <%= comment.content %>
+  </p>
+  <p>
     <small>by <%= comment.user.email %></small>
-</article>
-
+  </p>
 <hr>
+</div>

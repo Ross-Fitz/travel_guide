@@ -2,36 +2,27 @@
 
 <%= render @post %>
 
-<% if current_user %>
+<% if @post.user == current_user %>
   <div>
-    <%= link_to "Edit this post", edit_post_path(@post) %> |
-    <%= link_to "Return to posts", posts_path %>
+    <%= link_to "Edit this post", edit_post_path(@post), class:"btn btn-light" %> |
+    <%= link_to "Return to posts", post_path, class:"btn btn-light" %>
   <br>
   <br>
     <p>
     <strong>Comments:</strong>
-    <%= render @post.comments %>
   </p>
 <br>
-<br>
-<%= render partial: 'comments/form' %>
-<br>
-<br>
-    <%= button_to "Delete this post", @post, method: :delete%>
-  </div>
-
-<% else %>
-  <p>
-    <strong>Comments:</strong>
-    <%= render @post.comments %>
-  </p>
-  <br>
-  <br>
+  <%= render @post.comments %>
   <%= render partial: 'comments/form', locals: { post: @post } %>
-  <br>
-  <br>
-  <%= link_to "Return to posts", posts_path %>
-<% end %>
+  <%= button_to "Destroy this comment", @comment, method: :delete, class:"btn btn-light" %>
+<br>
+    <%= button_to "Delete this post", @post, method: :delete, class:"btn btn-light" %>
+  </div>
+  <% end %>
+<br>
+<br>
+  <%= link_to "Return to posts", post_path, class:"btn btn-light" %>
+
 
 
 

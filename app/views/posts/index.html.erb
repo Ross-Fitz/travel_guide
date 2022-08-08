@@ -5,27 +5,20 @@
 <h2>Forum Posts</h2>
 <br>
 
-<% if user_signed_in? %>
+
 <div id="posts">
   <% @posts.each do |post| %>
     <%= render post %>
     <p>
-      <%= link_to "Show this post", post %>
+      <%= link_to "Show this post", post_path, class:"btn btn-light" %>
     </p>
   <% end %>
 </div>
-<%= link_to "Create a new post", new_post_path %>
+<%= link_to "Create a new post", new_post_path, class:"btn btn-light" %>
 <br>
 <br>
-<a href="/">Return to Home</a>
-<% else %>
-  <div id="posts">
-  <% @posts.each do |post| %>
-    <%= render post %>
-    <p>
-      <%= link_to "Show this post", post %> | <a href="/">Return to Home</a>
-    </p>
-  <% end %>
-<% end %>
+<%= link_to "Return home", root_path, class:"btn btn-light" %>
+
+
 
 

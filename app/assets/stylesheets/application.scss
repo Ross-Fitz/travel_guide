@@ -50,6 +50,20 @@ body {
     font-size: 20px;
 }
 
+.checklist{
+    margin-bottom: 3%;
+}
+
+.heading {
+    margin-top: 3%;
+    margin-bottom: 3%;
+}
+
+a {
+    text-decoration: none;
+    color: #000000;
+}
+
 @media screen and (max-width: 1400px) {
     .form-box{
         margin: 0% 20%;
