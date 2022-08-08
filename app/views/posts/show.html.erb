@@ -1,27 +1,32 @@
-<p style="color: green"><%= notice %></p>
+<p style="color: #ffffff"><%= notice %></p>
 
 <%= render @post %>
 
 <% if @post.user == current_user %>
   <div>
-    <%= link_to "Edit this post", edit_post_path(@post), class:"btn btn-light" %> |
-    <%= link_to "Return to posts", post_path, class:"btn btn-light" %>
+    <%= link_to "Edit this post", edit_post_path(@post), class:"btn btn-light" %> 
   <br>
   <br>
     <p>
     <strong>Comments:</strong>
   </p>
-<br>
   <%= render @post.comments %>
   <%= render partial: 'comments/form', locals: { post: @post } %>
   <%= button_to "Destroy this comment", @comment, method: :delete, class:"btn btn-light" %>
 <br>
     <%= button_to "Delete this post", @post, method: :delete, class:"btn btn-light" %>
   </div>
-  <% end %>
+<% else %>
+  <strong>Comments:</strong>
+  <%= render @post.comments %>
+    <%= render partial: 'comments/form', locals: { post: @post } %>
+    <%= button_to "Destroy this comment", @comment, method: :delete, class:"btn btn-light" %>
+  <br>
+
+<% end %>
 <br>
 <br>
-  <%= link_to "Return to posts", post_path, class:"btn btn-light" %>
+  <%= link_to "Return to posts", posts_path, class:"btn btn-light" %>
 
 
 

@@ -1,5 +1,5 @@
 
-  <h2 class="password-reset">Edit <%= resource_name.to_s.humanize %> Log In</h2>
+  <h2 class="heading">Edit Your  <%= resource_name.to_s.humanize %> Log In Information</h2>
 
   <div class="forms">
   <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
@@ -41,8 +41,8 @@
   <hr>
   <h3>Delete my account</h3>
 
-  <p>Want to remove delete your account? <%= button_to "Remove my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
+  <p>Want to delete your account? <%= button_to "Remove my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete, class:"btn btn-light" %></p>
 
-  <%= link_to "Back", :back %>
+  <%= link_to "Back", :back, class:"btn btn-light" %>
 
   </div>

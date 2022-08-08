@@ -1,10 +1,12 @@
-<p style="color: green"><%= notice %></p>
+<p style="color: #ffffff"><%= notice %></p>
 
-<%= render @document %>
+<%= render @document %><br>
 
 <div>
-  <%= link_to "Edit this document", edit_document_path(@document), class:"btn btn-light" %> |
+  <%= link_to "Edit this document", edit_document_path(@document), class:"btn btn-light" %><br><br>
+  <%= button_to "Destroy this document", @document, method: :delete, class:"btn btn-light" %><br><br>
+  
   <%= link_to "Back to documents", documents_path, class:"btn btn-light" %>
 
-  <%= button_to "Destroy this document", @document, method: :delete, class:"btn btn-light" %>
+  
 </div>

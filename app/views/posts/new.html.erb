@@ -1,11 +1,11 @@
-<% if user_signed_in? %>
+
 
   <h1>New Forum Post</h1>
     <div class="forms">
       <%= render "form", post: @post %>
       <br>
       <div>
-        <%= link_to "Back to posts", post_path, class:"btn btn-light" %>
+        <%= link_to "Back to posts", posts_path %>
       </div>
     </div>
-<% end %>
+

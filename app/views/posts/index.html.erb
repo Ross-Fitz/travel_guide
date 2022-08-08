@@ -1,6 +1,6 @@
 <p style="#ffffff;"><%= notice %></p>
 
-<h1>Travel: A Helpful Guide on Visas Forum</h1>
+<h1 class="heading">Travel: A Helpful Guide on Visas Forum</h1>
 <br>
 <h2>Forum Posts</h2>
 <br>
@@ -10,14 +10,15 @@
   <% @posts.each do |post| %>
     <%= render post %>
     <p>
-      <%= link_to "Show this post", post_path, class:"btn btn-light" %>
+      <%= link_to "Show this post", post, class:"btn btn-light" %>
     </p>
+    <hr>
   <% end %>
 </div>
 <%= link_to "Create a new post", new_post_path, class:"btn btn-light" %>
 <br>
 <br>
-<%= link_to "Return home", root_path, class:"btn btn-light" %>
+<%= link_to "Back to Home", root_path, class:"btn btn-light"%>
 
 
 
