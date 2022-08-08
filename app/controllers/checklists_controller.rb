@@ -8,6 +8,7 @@ class ChecklistsController < ApplicationController
 
   # GET /checklists/1 or /checklists/1.json
   def show
+    @checklist.user = current_user
   end
 
   # GET /checklists/new

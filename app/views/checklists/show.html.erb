@@ -1,5 +1,6 @@
-<p style="color: green"><%= notice %></p>
+<p style="color: #ffffff"><%= notice %></p>
 
+<% if @checklist.user == current_user %>
 <%= render @checklist %>
 
 <div>
@@ -7,3 +8,5 @@
   <%= link_to "Back to checklists", checklists_path, class:"btn btn-light" %>
 
 </div>
+
+<% end %>

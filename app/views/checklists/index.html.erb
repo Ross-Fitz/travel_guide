@@ -1,4 +1,4 @@
-<p style="color: green"><%= notice %></p>
+<p style="color: #ffffff"><%= notice %></p>
 
 <h1 class="heading">Checklists</h1>
 
@@ -6,9 +6,9 @@
   <% @checklists.each do |checklist| %>
     <%= render checklist %>
     <p>
-      <%= link_to "Show this checklist", checklist %>
+      <%= link_to "Show this checklist", checklist, class:"btn btn-light" %>
     </p>
   <% end %>
 </div>
 
-<%= link_to "New checklist", new_checklist_path %>
+<%= link_to "New checklist", new_checklist_path, class:"btn btn-light" %>

@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   end
 
   # This is the main route to load up what the user sees when web application has been accessed.
-root 'home#index'
-  get 'home/checklist'
+  root 'home#index'
+  get 'home/countries'
+  get 'home/canada'
 end

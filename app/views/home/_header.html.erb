@@ -1,5 +1,6 @@
 <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #000000;">
       <div class="container-fluid">
+      <!-- Logo is a link to bring the user to the homepage -->
       <a class="navbar-brand" href="/"><%= image_tag "TravelLogo.png" %></a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -7,7 +8,7 @@
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="/">Home</a>
+          <%= link_to "Home", root_path, class:"nav-link active" %>
         </li>
         
         <li class="nav-item dropdown">
@@ -15,16 +16,16 @@
           Countries
         </a>
         <ul class="dropdown-menu">
-          <li><a class="dropdown-item" href="/countries/1">Australia</a></li>
-          <li><a class="dropdown-item" href="/countries/2">Canada</a></li>
-          <li><a class="dropdown-item" href="/countries/3">Japan</a></li>
+          <li><a class="dropdown-item" href="#">Australia</a></li>
+          <li><a class="dropdown-item" href="home/canada">Canada</a></li>
+          <li><a class="dropdown-item" href="#">Japan</a></li>
           <hr>
-          <li><a class="dropdown-item" href="/countries">All other countries</a></li>
+          <li><a class="dropdown-item" href="home/countries">All other countries</a></li>
         </ul>
       </li>
 
       <li class="nav-item">
-          <a class="nav-link" href="/posts">Forum</a>
+          <%= link_to "Forum", posts_path, class:"nav-link" %>
         </li>
 
         <li class="nav-item dropdown">
@@ -32,9 +33,10 @@
             Account
           </a>
           <ul class="dropdown-menu">
+          <!-- When a user is signed in, they will see new links available to them -->
           <% if user_signed_in? %>
-          <li class="dropdown-item"><%= link_to "Checklist", checklists_path %></li>
-            <li><a class="dropdown-item" href="/documents">Documents</a></li>
+            <li class="dropdown-item"><%= link_to "Checklist", checklists_path %></li>
+            <li class="dropdown-item"><%= link_to "Documents", documents_path%></li>
             <li><%= link_to "Edit Profile",
             edit_user_registration_path, class:"dropdown-item" %></li>
             <hr>
