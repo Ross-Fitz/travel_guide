@@ -1,0 +1,12 @@
+<h2 class="heading"> <%= image_tag 'canada.png', style: 'max-width:50px; max-height: 50px;' %> Canada <%= image_tag 'canada.png', style: 'max-width:50px; max-height: 50px;' %> </h2>
+<br>
+<div>
+   <p>Click on this link <a href="https://twitter.com/CitImmCanada?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" 
+      style="text-decoration: underline; color: #ffffff;">IRCC Twitter homepage </a> to get up to date information on the status </p>
+</div><br>
+
+<p> There are many different types of visas to apply for when thinking about travelling or imigrating 
+    to Canada. These are listed below: </p><br>
+<%= render partial: 'visas/iec' %><br>
+<%= render partial: 'visas/express_entry' %><br>
+<%= render partial: 'visas/pnp' %>

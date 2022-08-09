@@ -1,14 +1,19 @@
 <p style="color: #ffffff"><%= notice %></p>
 
 <h1 class="heading">Checklists</h1>
+<% if  current_user  %>
+  <div id="checklists">
+    <% @checklists.each do |checklist| %>
+      <%= render checklist %>
+      <p>
+        <%= link_to "Show this checklist", checklist, class:"btn btn-light" %>
+      </p>
+    <% end %>
+  </div>
+  <%= link_to "New checklist", new_checklist_path, class:"btn btn-light" %>
 
-<div id="checklists">
-  <% @checklists.each do |checklist| %>
-    <%= render checklist %>
-    <p>
-      <%= link_to "Show this checklist", checklist, class:"btn btn-light" %>
-    </p>
-  <% end %>
-</div>
+<%else %>
+  <%= link_to "New checklist", new_checklist_path, class:"btn btn-light" %>
 
-<%= link_to "New checklist", new_checklist_path, class:"btn btn-light" %>
+<% end %>
+

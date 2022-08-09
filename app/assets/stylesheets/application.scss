@@ -2,7 +2,7 @@
 
 @import "bootstrap";
 
-nav img {
+img {
     max-height: 110px;
     max-width: 110px;
 }
@@ -11,12 +11,7 @@ body {
     background-image: linear-gradient(red, white, black);
     text-align: center;
     color: #000000;
-    background-position: bottom-center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    min-height: 100vh;
     
-
     h1 {
         font-size: 30px;
     }
@@ -64,6 +59,14 @@ body {
 a {
     text-decoration: none;
     color: #000000;
+}
+
+.text {
+    text-align: justify;
+}
+
+.visas {
+    margin: 3%;
 }
 
 

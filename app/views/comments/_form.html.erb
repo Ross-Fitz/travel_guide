@@ -1,7 +1,20 @@
-<form action="<%= post_comments_path(post)%>" method="post">
-  <input type="hidden" name="authenticity_token">
+<% if @post.user == current_user %>
 
-  <textarea name="comment[content]" rows="6" cols="20" ></textarea>
+  <form action="<%= post_comments_path(post)%>" method="post">
+    <input type="hidden" name="authenticity_token">
 
-  <input type="submit" value=Submit><br><br>
-</form>
+    <textarea name="comment[content]" rows="6" cols="20" placeholder="Add your comment here"></textarea>
+
+    <input type="submit" value=Submit><br><br>
+  </form>
+
+<% else %>
+  <form action="<%= post_comments_path(post)%>" method="post">
+    <input type="hidden" name="authenticity_token">
+
+    <textarea name="comment[content]" rows="6" cols="20" placeholder="To add a comment, please sign in or register" ></textarea>
+
+  </form>
+
+<% end %>
+

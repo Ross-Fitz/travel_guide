@@ -11,5 +11,5 @@ Rails.application.routes.draw do
   # This is the main route to load up what the user sees when web application has been accessed.
   root 'home#index'
   get 'home/countries'
-  get 'home/canada'
+  get 'countries/canada'
 end

@@ -3,7 +3,6 @@
 
 <p style="#ffffff"><%= notice %></p>
 
-<%# if @document.user == current_user %>
 
   <h1 class="heading">Your Documents</h1>
 
@@ -21,7 +20,3 @@
 
   <%= link_to "New document", new_document_path, class:"btn btn-light" %>
 
-<%# else %>
-  <%= link_to "New document", new_document_path, class:"btn btn-light" %>
-
-<%# end %>

@@ -12,15 +12,15 @@
   </p>
   <%= render @post.comments %>
   <%= render partial: 'comments/form', locals: { post: @post } %>
-  <%= button_to "Destroy this comment", @comment, method: :delete, class:"btn btn-light" %>
 <br>
     <%= button_to "Delete this post", @post, method: :delete, class:"btn btn-light" %>
   </div>
 <% else %>
   <strong>Comments:</strong>
   <%= render @post.comments %>
-    <%= render partial: 'comments/form', locals: { post: @post } %>
-    <%= button_to "Destroy this comment", @comment, method: :delete, class:"btn btn-light" %>
+    <%= render partial: 'comments/form', locals: { post: @post } %><br>
+    <%= button_to "Destroy this comment", @comment, method: :delete %>
+
   <br>
 
 <% end %>
