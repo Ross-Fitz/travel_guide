@@ -72,11 +72,22 @@ group :test do
   gem "webdrivers"
 end
 
+# Styling and design
 gem 'bootstrap', '~> 5.1', '>= 5.1.3'
+
+# User authentication
 gem 'devise', '~> 4.8', '>= 4.8.1'
+
+# Render json file
 gem 'json', '~> 2.6', '>= 2.6.2'
+
+# Allow images and files to be uploaded
 gem 'active_model_serializers', '~> 0.10.2'
+
+# Create json file 
 gem 'jsonapi-resources', '~> 0.10.7'
+
+# Easy form validation
 gem 'simple_form', '~> 5.1'
 
 
