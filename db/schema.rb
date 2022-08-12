@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_08_08_000551) do
+ActiveRecord::Schema[7.0].define(version: 2022_08_12_144742) do
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
     t.string "record_type", null: false
@@ -66,6 +66,12 @@ ActiveRecord::Schema[7.0].define(version: 2022_08_08_000551) do
     t.index ["user_id"], name: "index_comments_on_user_id"
   end
 
+  create_table "countries", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "documents", force: :cascade do |t|
     t.string "name", null: false
     t.datetime "created_at", null: false
@@ -96,6 +102,15 @@ ActiveRecord::Schema[7.0].define(version: 2022_08_08_000551) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  create_table "visas", force: :cascade do |t|
+    t.string "name"
+    t.text "information"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "country_id", null: false
+    t.index ["country_id"], name: "index_visas_on_country_id"
+  end
+
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
   add_foreign_key "checklists", "users"
@@ -103,4 +118,5 @@ ActiveRecord::Schema[7.0].define(version: 2022_08_08_000551) do
   add_foreign_key "comments", "users"
   add_foreign_key "documents", "users"
   add_foreign_key "posts", "users"
+  add_foreign_key "visas", "countries"
 end
