@@ -1,9 +1,6 @@
 require "test_helper"
 
 class CommentsControllerTest < ActionDispatch::IntegrationTest
-  setup do
-    @comment = comments(:one)
-  end
 
   test "should get index" do
     get comments_url
@@ -46,3 +43,4 @@ class CommentsControllerTest < ActionDispatch::IntegrationTest
     assert_redirected_to comments_url
   end
 end
+

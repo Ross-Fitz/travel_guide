@@ -10,6 +10,7 @@
   <form action="<%= post_comments_path(post)%>" method="post">
     <input type="hidden" name="authenticity_token">
     <textarea name="comment[content]" rows="6" cols="20" placeholder="To add a comment, please sign in or register" ></textarea>
+    <input type="submit" value=Submit><br><br>
   </form>
   
 <% end %>

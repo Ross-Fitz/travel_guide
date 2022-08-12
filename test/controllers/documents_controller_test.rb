@@ -46,3 +46,4 @@ class DocumentsControllerTest < ActionDispatch::IntegrationTest
     assert_redirected_to documents_url
   end
 end
+

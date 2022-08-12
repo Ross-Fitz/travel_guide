@@ -46,3 +46,4 @@ class ChecklistsControllerTest < ActionDispatch::IntegrationTest
     assert_redirected_to checklists_url
   end
 end
+
