@@ -1,10 +1,12 @@
 <!-- When the user clicks on the "Documents" link this is what will be shown -->
 <!-- Messages appear on screen for the user when they create, edit and delete data from the forms, eg "document was successfully created " -->
 
-<p style="#ffffff"><%= notice %></p>
+<p style=" color: #ffffff"><%= notice %></p>
 
 
   <h1 class="heading">Your Documents</h1>
+
+ 
 
   <div id="documents">
     <% @documents.each do |document| %>
@@ -18,5 +20,6 @@
     <% end %>
   </div>
 
-  <%= link_to "New document", new_document_path, class:"btn btn-light" %>
+  <%= link_to "New document", new_document_path, class:"btn btn-light" %> 
 
+  

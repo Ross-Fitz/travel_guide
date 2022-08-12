@@ -1,5 +1,6 @@
 <p style="color: #ffffff"><%= notice %></p>
 
+<% if @document.user == current_user %>
 <%= render @document %><br>
 
 <div>
@@ -10,3 +11,5 @@
 
   
 </div>
+
+<% end %>

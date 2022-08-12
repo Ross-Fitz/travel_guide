@@ -1,9 +1,12 @@
 <h1 class="heading">Editing checklist</h1>
 
-<%= render "form", checklist: @checklist %>
+<% if @checklist.user == current_user %>
+  <%= render "form", checklist: @checklist %>
 
-<br>
+  <br>
 
-<div>
-  <%= link_to "Back to checklists", checklists_path, class:"btn btn-light" %>
-</div>
+  <div>
+    <%= link_to "Back to checklists", checklists_path, class:"btn btn-light" %>
+  </div>
+
+<% end %>
