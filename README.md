@@ -1,24 +1,25 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+The following software is required to run the application:
 
-Things you may want to cover:
+Ruby on Rails version 7.0.3.1
 
-* Ruby version
+&
 
-* System dependencies
+Windows Command Line or Terminal on MacOS or Terminal on Linux
 
-* Configuration
 
-* Database creation
+To install Ruby on Rails for Windows, follow the steps in this link:
+https://www.tutorialspoint.com/ruby-on-rails/rails-installation.htm
 
-* Database initialization
 
-* How to run the test suite
+To install Ruby on Rails on Mac, follow this link:
+https://gorails.com/setup/osx/11-big-sur
 
-* Services (job queues, cache servers, search engines, etc.)
 
-* Deployment instructions
+Once Ruby on Rails has been installed get the source code from Github, open the Terminal or Command line and enter the following command:
+"rails server" or "rails s"
 
-* ...
+
+Navigate to this address in your browser:
+localhost:3000 
