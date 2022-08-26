@@ -1,3 +1,5 @@
+# All gems that are used in application are put here followed by the bundle install command in Terminal
+
 source "https://rubygems.org"
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
